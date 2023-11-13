@@ -1,17 +1,18 @@
-// Datos en variables en JavaScript
-var datos = [1, 2, 3, 4, 5, 6, 7, 800, 9, 10];
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener la referencia a la tabla
+    var tabla = document.getElementById('miTabla');
+    var tbody = tabla.getElementsByTagName('tbody')[0];
 
-// Obtener la referencia a la tabla
-var tabla = document.getElementById('miTabla');
-var tbody = tabla.getElementsByTagName('tbody')[0];
-var mostrarGraficosBtn = document.getElementById('botonG');
-var contenidoInicial = document.getElementById('inicio');
-    var contenidoGraficos = document.getElementById('graficos');
-
-
-// Llenar la tabla con datos desde la variable
-for (var i = 0; i < datos.length; i++) {
-    var fila = tbody.insertRow(i);
-    var celda = fila.insertCell(0);
-    celda.innerHTML = datos[i];
-}
+    // Realizar una solicitud para obtener datos del backend (PHP)
+    fetch('get_data.php')
+        .then(response => response.json())
+        .then(data => {
+            // Llenar la tabla con datos desde la respuesta del backend
+            data.forEach(rowData => {
+                var fila = tbody.insertRow();
+                var celda = fila.insertCell(0);
+                celda.innerHTML = rowData.temperatura; // Ajusta la propiedad según tu estructura de datos
+            });
+        })
+        .catch(error => console.error('Error:', error));
+});
