@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página con Título, Imagen y Botones</title>
+    <script src="COMpf.js"></script>
+    <style>
+        body {
+            background-color: rgb(173, 173, 220);
+            text-align: center;
+        }
+        h1 {
+            color: rgb(87, 222, 87);
+        }
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .button {
+            position: absolute;
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 10%;
+        }
+        .button1 {
+            top: 80%;
+            width: 200px;
+            right: 30%;
+            height: 100px;
+          
+        }
+        .button2 {
+            top: 15%;
+           width: 350px;
+           right: 15%;
+           height: 350px;
+        }
+        .grafic{
+            position: absolute;
+            background-color: #199830;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 50%;
+
+
+        }
+        .gc1{
+            left: 55%;
+            
+        }
+        .gc2{
+            left: 40%;
+        }
+        #numero {
+            position: fixed; /* Cambiado a posición fija */
+            top: 30%; /* Ajusta la distancia desde la parte superior */
+            left: 55%; /* Ajusta la distancia desde la izquierda */
+            background-color: rgb(174, 206, 195);
+           font-size: 30px;
+           color: black;
+        }   
+        #numero2{
+            position: fixed; /* Cambiado a posición fija */
+                    top: 60%; /* Ajusta la distancia desde la parte superior */
+                    left: 55%; /* Ajusta la distancia desde la izquierda */
+                    background-color: rgb(174, 206, 195);
+                font-size: 30px;
+                color: black;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>cuidador verde inteligente</h1>
+    <div class="image-container">
+        <p id="numero"></p>
+        <p id="numero2"></p>
+        <img src="C:\Users\Darwin Criollo\Downloads\planta.png" alt="Descripción de la imagen">
+            <button id="boton1", class="button button1">Botón 1</button>
+            <button id="boton2", class="button button2">Botón 2</button>
+    </div>
+    
+    <center>
+    <div id = botonesG>
+        <button id="botonG", class= "grafic gc1">Graficos</button>
+        <button id="botonG", class= "grafic gc2">Recomendaciones</button>
+    </div>
+    </center>
+
+
+    
+</body>
+</html>
