@@ -9,22 +9,28 @@
             border-collapse: collapse;
             width: 20%;
             margin: 20px auto;
+            
         }
         th, td {
-            border: 1px solid #dddddd;
+            border: 1px solid #acd621;
             text-align: center;
             padding: 8px;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #acd621;
+        }
+        body{
+            background-color: rgb(118, 177, 118);
         }
     </style>
+    <!-- Agrega el enlace a la biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
 
-    <h2>Tabla con Datos Dinámicos</h2>
+    <h2>Datos:</h2>
 
-    <table id="miTabla">
+    <table id="tablaTemperatura">
         <thead>
             <tr>
                 <th>Temperatura</th>
@@ -35,7 +41,18 @@
         </tbody>
     </table>
 
-    <!-- Vincula el archivo JavaScript -->
-    <script src="Graficos.js"></script>
+    <table id="tablaHumedad">
+        <thead>
+            <tr>
+                <th>Humedad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las celdas se llenarán con datos desde JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="Graficos.js"> </script>
+
 </body>
 </html>
